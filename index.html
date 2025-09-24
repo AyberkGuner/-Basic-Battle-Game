@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <title>Basit Savaş Oyunu</title>
+</head>
+<body>
+
+  <section class="mt-4">
+    <div class="container">
+      <div class="card bg-light p-3">
+        <div class="row align-items-center g-3">
+
+          <!-- Asker 1 -->
+          <div class="col-6 col-lg-3 text-center text-lg-start">
+            <img id="asker1-img" src="asker1.png" height="80" class="img-fluid"
+                 alt="Asker 1">
+            <div class="mt-2" role="group" aria-label="Asker 1 sağlık durumu">
+              <div class="d-flex" aria-hidden="true">
+                <div id="asker1-yesil"
+                     style="width: 100px; height: 30px; background-color: green;"></div>
+                <div id="asker1-kirmizi"
+                     style="width: 0px; height: 30px; background-color: red;"></div>
+              </div>
+              <div class="visually-hidden" id="asker1-health-text">Asker 1 sağlığı</div>
+            </div>
+          </div>
+
+          <!-- Orta Alan: Butonlar -->
+          <div class="col-12 col-lg-6 text-center">
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <button id="start-button" onclick="savas()" class="btn btn-success">
+                Savaş
+              </button>
+              <button id="refresh-button" style="display: none;" onclick="refreshSavas()" class="btn btn-success">
+                Tekrar Oyna
+              </button>
+            </div>
+            <p class="mt-2 mb-0 small text-muted" aria-live="polite" aria-atomic="true">
+              Savaş’a basarak mücadeleyi başlatın.
+            </p>
+          </div>
+
+          <!-- Asker 2 -->
+          <div class="col-6 col-lg-3 text-center text-lg-end">
+            <img id="asker2-img" src="asker2.png" height="80" class="img-fluid"
+                 alt="Asker 2">
+            <div class="mt-2" role="group" aria-label="Asker 2 sağlık durumu">
+              <div class="d-flex justify-content-end" aria-hidden="true">
+                <div id="asker2-yesil"
+                     style="width: 100px; height: 30px; background-color: green;"></div>
+                <div id="asker2-kirmizi"
+                     style="width: 0px; height: 30px; background-color: red;"></div>
+              </div>
+              <div class="visually-hidden" id="asker2-health-text">Asker 2 sağlığı</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
